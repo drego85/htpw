@@ -86,8 +86,7 @@ RewriteEngine On
 RewriteCond %{HTTP_USER_AGENT} ^.*(SCspider|WPScan|s2bot|Zeus|360Spider|Batman|PhantomJS|sqlmap|sqlninja|arachni|dirbuster|havij|nessus|nmap|openvas|w3af|zgrab|Wappalyzer).*$ [NC]
 RewriteRule .* - [F,L]
 
-# Block WordPress xmlrpc.php requests
-# except JetPack or Akismet:
+# Block XML-RPC requests except JetPack or Akismet connections:
 # https://jetpack.com/support/hosting-faq/
 # https://jetpack.com/ips-v4.txt
 # https://blog.akismet.com/akismet-hosting-faq/
