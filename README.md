@@ -26,6 +26,10 @@ htpw introduces protection against:
 
 
 
+### Installation
+
+Add to the bottom of your .htaccess file the contents of the [htaccess](https://github.com/drego85/htpw/blob/main/htaccess) file. 
+
 ### Credits
 
 * [Andrea Draghetti](https://twitter.com/AndreaDraghetti) is the creator of the project;
