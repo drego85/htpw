@@ -70,6 +70,7 @@ Options -Indexes
 	RewriteRule ^wp-includes/theme-compat/ - [F]
 	RewriteCond %{REQUEST_FILENAME} -f
 	RewriteRule (^|.*/)\.(git|svn)/.* - [F]
+	RewriteRule ^wp-content/debug\.log$ - [F]
 
 	# Disable PHP in Uploads
 	RewriteRule ^wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
