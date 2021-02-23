@@ -22,7 +22,7 @@ htpw introduces protection against:
 - Disable the execution of PHP code in the Plugins directory;
 - Disable the execution of PHP code in the Themes directory;
 - Block malicious or suspicious user agent;
-- Block xmlrpc requests except JetPack or Akismet connections.
+- Block XML-RPC requests except JetPack or Akismet connections.
 
 
 
