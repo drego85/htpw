@@ -17,6 +17,7 @@ It doesn't introduce invasive rules (XSS or Injection protection) to avoid creat
 htpw introduces protection against:
 
 - Protect system files;
+- Protect log files;
 - Disable directory listening;
 - Disable the execution of PHP code in the Upload directory;
 - Disable the execution of PHP code in the Plugins directory;
