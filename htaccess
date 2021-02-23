@@ -79,12 +79,11 @@ Options -Indexes
 
 	# Disable PHP in Themes
 	RewriteRule ^wp\-content/themes/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+	
+	# Block Malicious or Suspicious User Agent
+	RewriteCond %{HTTP_USER_AGENT} ^.*(SCspider|WPScan|s2bot|Zeus|360Spider|Batman|PhantomJS|sqlmap|sqlninja|arachni|dirbuster|havij|nessus|nmap|openvas|w3af|zgrab|Wappalyzer).*$ [NC]
+	RewriteRule .* - [F,L]
 </IfModule>
-
-# Block Malicious or Suspicious User Agent
-RewriteEngine On
-RewriteCond %{HTTP_USER_AGENT} ^.*(SCspider|WPScan|s2bot|Zeus|360Spider|Batman|PhantomJS|sqlmap|sqlninja|arachni|dirbuster|havij|nessus|nmap|openvas|w3af|zgrab|Wappalyzer).*$ [NC]
-RewriteRule .* - [F,L]
 
 # Block XML-RPC requests except JetPack or Akismet connections:
 # https://jetpack.com/support/hosting-faq/
