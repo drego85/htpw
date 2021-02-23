@@ -81,8 +81,25 @@ Options -Indexes
 	RewriteRule ^wp\-content/themes/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
 	
 	# Block Malicious or Suspicious User Agent
-	RewriteCond %{HTTP_USER_AGENT} ^.*(SCspider|WPScan|s2bot|Zeus|360Spider|Batman|PhantomJS|sqlmap|sqlninja|arachni|dirbuster|havij|nessus|nmap|openvas|w3af|zgrab|Wappalyzer).*$ [NC]
-	RewriteRule .* - [F,L]
+	RewriteCond %{HTTP_USER_AGENT} "^360Spider" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^arachni" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^Batman" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^dirbuster" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^havij" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^nessus" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^nmap" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^openvas" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^PhantomJS" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^s2bot" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^SCspider" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^sqlmap" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^sqlninja" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^w3af" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^Wappalyzer" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^WPScan" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^Zeus" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^zgrab" [NC]
+	RewriteRule ^.* - [F,L]
 </IfModule>
 
 # Block XML-RPC requests except JetPack or Akismet connections:
