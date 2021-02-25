@@ -31,6 +31,18 @@ htpw introduces protection against:
 
 Add to the bottom of your .htaccess file the contents of the [htaccess](https://github.com/drego85/htpw/blob/main/htaccess) file. 
 
+
+
+### Testing
+
+If you want to test if the new rules work and protect your Wordpress site you can use WPScan (WordPress Security Scanner), if the default scan fails htpw is working!
+
+You can install WPScan on your PC or use it [online](https://w-e-b.site/?act=wpscan&color=on), online scan failed example:
+
+
+![WPScan Fails via htpw](https://pbs.twimg.com/media/EvD-mSpWYAIEjrD?format=png&name=small)
+
+
 ### Credits
 
 * [Andrea Draghetti](https://twitter.com/AndreaDraghetti) is the creator of the project;
