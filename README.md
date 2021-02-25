@@ -16,13 +16,13 @@ It doesn't introduce invasive rules (XSS or Injection protection) to avoid creat
 
 *htpw* introduces protection against:
 
-- Protect system files;
 - Protect log files;
+- Protect system files;
 - Disable directory listening;
+- Block malicious or suspicious user agent;
 - Disable the execution of PHP code in the Upload directory;
 - Disable the execution of PHP code in the Plugins directory;
 - Disable the execution of PHP code in the Themes directory;
-- Block malicious or suspicious user agent;
 - Block XML-RPC requests except JetPack or Akismet connections.
 
 
