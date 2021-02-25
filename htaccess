@@ -4,7 +4,7 @@
 #
 # https://github.com/drego85/htpw
 #
-# Version: 1.0 - Last Update: 25 Feb 2021
+# Version: 1.1 - Last Update: 25 Feb 2021
 #
 # This file may be licensed under the terms of of the
 # GNU General Public License Version 3 (the ``GPL'').
@@ -116,19 +116,32 @@ Options -Indexes
 </IfModule>
 
 # Block XML-RPC requests except JetPack or Akismet connections:
-# https://jetpack.com/support/hosting-faq/
-# https://jetpack.com/ips-v4.txt
-# https://blog.akismet.com/akismet-hosting-faq/
+# - https://jetpack.com/support/hosting-faq/
+# - https://jetpack.com/ips-v4.txt
+# - https://blog.akismet.com/akismet-hosting-faq/
 <files xmlrpc.php>
-order deny,allow
-deny from all
-allow from 122.248.245.244/32
-allow from 54.217.201.243/32
-allow from 54.232.116.4/32
-allow from 192.0.80.0/20
-allow from 192.0.96.0/20
-allow from 192.0.112.0/20
-allow from 195.234.108.0/22
+	<IfModule mod_authz_core.c>
+		<RequireAny>
+			Require ip 122.248.245.244/32
+			Require ip 54.217.201.243/32
+			Require ip 54.232.116.4/32
+			Require ip 192.0.80.0/20
+			Require ip 192.0.96.0/20
+			Require ip 192.0.112.0/20
+			Require ip 195.234.108.0/22
+		</RequireAny>
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order deny,allow
+		Deny from all
+		allow from 122.248.245.244/32
+		allow from 54.217.201.243/32
+		allow from 54.232.116.4/32
+		allow from 192.0.80.0/20
+		allow from 192.0.96.0/20
+		allow from 192.0.112.0/20
+		allow from 195.234.108.0/22
+	</IfModule>
 </files>
 
 # END htpw
