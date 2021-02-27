@@ -1,14 +1,17 @@
-# START htpw
-#
-# htpw was made with ♥ by Andrea Draghetti
-#
-# https://github.com/drego85/htpw
-#
-# Version: 1.1 - Last Update: 25 Feb 2021
-#
-# This file may be licensed under the terms of of the
-# GNU General Public License Version 3 (the ``GPL'').
-#
+# Copyright (C) 2020 drego85, techboyg5
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Protect System Files
 <files .htaccess>
