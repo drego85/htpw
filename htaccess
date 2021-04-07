@@ -4,7 +4,7 @@
 #
 # https://github.com/drego85/htpw
 #
-# Version: 1.1 - Last Update: 25 Feb 2021
+# Version: 1.2 - Last Update: 07 Apr 2021
 #
 # This file may be licensed under the terms of of the
 # GNU General Public License Version 3 (the ``GPL'').
@@ -143,5 +143,15 @@ Options -Indexes
 		allow from 195.234.108.0/22
 	</IfModule>
 </files>
+
+# Security Headers
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+	Header set X-Frame-Options "SAMEORIGIN"
+	Header set X-Content-Type-Options "nosniff"
+	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+	Header set Referrer-Policy "origin"
+	Header set Permissions-Policy "geolocation 'self'; vibrate 'none'"
+</IfModule>
 
 # END htpw
