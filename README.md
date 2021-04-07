@@ -19,6 +19,7 @@ It doesn't introduce invasive rules (XSS or Injection protection) to avoid creat
 - Protect log files;
 - Protect system files;
 - Disable directory listening;
+- Implementation of Security Headers;
 - Block malicious or suspicious user agent;
 - Disable the execution of PHP code in the Upload directory;
 - Disable the execution of PHP code in the Plugins directory;
