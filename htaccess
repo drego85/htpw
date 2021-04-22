@@ -4,7 +4,7 @@
 #
 # https://github.com/drego85/htpw
 #
-# Version: 1.2 - Last Update: 07 Apr 2021
+# Version: 1.3 - Last Update: 22 Apr 2021
 #
 # This file may be licensed under the terms of of the
 # GNU General Public License Version 3 (the ``GPL'').
@@ -100,7 +100,9 @@ Options -Indexes
 	RewriteCond %{HTTP_USER_AGENT} "^dirbuster" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "^havij" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "^nessus" [NC,OR]
-	RewriteCond %{HTTP_USER_AGENT} "^nmap" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^Nikto" [NC,OR]	
+	RewriteCond %{HTTP_USER_AGENT} "^Nmap" [NC,OR]
+	RewriteCond %{HTTP_USER_AGENT} "^Nuclei" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "^openvas" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "^PhantomJS" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "^s2bot" [NC,OR]
