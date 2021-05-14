@@ -65,6 +65,15 @@
 		Deny from all
 	</IfModule>
 </files>
+<files php_errorlog>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</files>
 
 # Disable Directory Listening
 Options -Indexes
@@ -83,6 +92,7 @@ Options -Indexes
 	RewriteRule (^|.*/)\.(git|svn)/.* - [F]
 	RewriteRule ^wp-content/debug\.log$ - [F]
 	RewriteRule (^|/)error_log$ - [F]
+	RewriteRule (^|/)php_errorlog$ - [F]
 
 	# Disable PHP in Uploads
 	RewriteRule ^wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
