@@ -163,7 +163,6 @@ Options -Indexes
 	Header set X-Content-Type-Options "nosniff"
 	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
 	Header set Referrer-Policy "origin"
-	Header set Content-Security-Policy "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
 </IfModule>
 
 # END htpw
