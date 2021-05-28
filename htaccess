@@ -95,13 +95,13 @@ Options -Indexes
 	RewriteRule (^|/)php_errorlog$ - [F]
 
 	# Disable PHP in Uploads
-	RewriteRule ^wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+	RewriteRule ^wp\-content/uploads/.*\.(?:php[1-8]?|pht|phtml?|phps)\.?$ - [NC,F]
 
 	# Disable PHP in Plugins
-	RewriteRule ^wp\-content/plugins/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+	RewriteRule ^wp\-content/plugins/.*\.(?:php[1-8]?|pht|phtml?|phps)\.?$ - [NC,F]
 
 	# Disable PHP in Themes
-	RewriteRule ^wp\-content/themes/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+	RewriteRule ^wp\-content/themes/.*\.(?:php[1-8]?|pht|phtml?|phps)\.?$ - [NC,F]
 	
 	# Block Malicious or Suspicious User Agent
 	RewriteCond %{HTTP_USER_AGENT} "^360Spider" [NC,OR]
