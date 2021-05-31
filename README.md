@@ -22,7 +22,7 @@ It doesn't introduce invasive rules (XSS or Injection protection) to avoid creat
 - Implementation of Security Headers;
 - Block malicious or suspicious user agent;
 - Disable the execution of PHP code in the Upload directory;
-- Disable the execution of PHP code in the Plugins directory;
+- Disable the execution of PHP code in the Plugins directory (rule by default disabled);
 - Disable the execution of PHP code in the Themes directory;
 - Block XML-RPC requests except JetPack or Akismet connections.
 
