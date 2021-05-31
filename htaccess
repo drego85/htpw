@@ -98,7 +98,7 @@ Options -Indexes
 	RewriteRule ^wp\-content/uploads/.*\.(?:php[1-8]?|pht|phtml?|phps)\.?$ - [NC,F]
 
 	# Disable PHP in Plugins
-	RewriteRule ^wp\-content/plugins/.*\.(?:php[1-8]?|pht|phtml?|phps)\.?$ - [NC,F]
+	# RewriteRule ^wp\-content/plugins/.*\.(?:php[1-8]?|pht|phtml?|phps)\.?$ - [NC,F]
 
 	# Disable PHP in Themes
 	RewriteRule ^wp\-content/themes/.*\.(?:php[1-8]?|pht|phtml?|phps)\.?$ - [NC,F]
