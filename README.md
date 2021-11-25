@@ -45,7 +45,7 @@ You can install WPScan on your PC or use it [online](https://w-e-b.site/?act=wps
 
 ![WPScan Fails via htpw](https://pbs.twimg.com/media/EvD-mSpWYAIEjrD?format=png&name=small)
 
-## Troubleshooting
+### Troubleshooting
 
 - If you use a CDN service (like Cloudflare) remember to install the `mod_remoteip` apache module
 
