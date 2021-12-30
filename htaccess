@@ -4,7 +4,7 @@
 #
 # https://github.com/drego85/htpw
 #
-# Version: 1.4 - Last Update: 31 May 2021
+# Version: 1.5 - Last Update: 30 Dec 2021
 #
 # This file may be licensed under the terms of of the
 # GNU General Public License Version 3 (the ``GPL'').
@@ -74,6 +74,15 @@
 		Deny from all
 	</IfModule>
 </files>
+<FilesMatch "\.(?i:sql|data|json|yml|ini)$">
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</FilesMatch>
 
 # Disable Directory Listening
 Options -Indexes
@@ -90,6 +99,7 @@ Options -Indexes
 	RewriteRule ^wp-includes/theme-compat/ - [F]
 	RewriteCond %{REQUEST_FILENAME} -f
 	RewriteRule (^|.*/)\.(git|svn)/.* - [F]
+	RewriteRule .(sql|data|json|yml|ini) - [F]
 	RewriteRule ^wp-content/debug\.log$ - [F]
 	RewriteRule (^|/)error_log$ - [F]
 	RewriteRule (^|/)php_errorlog$ - [F]
